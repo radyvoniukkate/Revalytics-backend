@@ -1,11 +1,9 @@
 services:
   - type: web
     name: fastapi-app
-    runtime: python
-    services:
-  - type: web
-    name: fastapi-app
-    runtime: python
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
     buildCommand: |
       pyenv install 3.10.13
       pyenv global 3.10.13
