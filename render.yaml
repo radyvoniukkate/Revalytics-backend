@@ -2,7 +2,14 @@ services:
   - type: web
     name: fastapi-app
     runtime: python
-    buildCommand: pip install -r requirements.txt
+    services:
+  - type: web
+    name: fastapi-app
+    runtime: python
+    buildCommand: |
+      pyenv install 3.10.13
+      pyenv global 3.10.13
+      pip install -r requirements.txt
     startCommand: uvicorn server.main:app --host=0.0.0.0 --port=$PORT
     envVars:
       - key: PYTHON_VERSION
