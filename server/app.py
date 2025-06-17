@@ -1,20 +1,21 @@
 from fastapi import APIRouter
-from models import Item
-from parser_apartments import parse_apartments
 from bson import ObjectId
 import hashlib
 from typing import Optional
-from news import fetch_and_store_news
-from database import get_news_collection
 from typing import List
-from database import get_collection_by_type
-from database import get_collection_by_year
+from server.database import get_collection_by_type
+from server.database import get_collection_by_year
 from fastapi import Query
 import logging
 logger = logging.getLogger("uvicorn")
-from database import get_usd_collection
+from server.database import get_usd_collection
 from fastapi import HTTPException
-from forecast import get_price_forecast
+from server.models import Item
+from server.parser_apartments import parse_apartments
+from server.news import fetch_and_store_news
+from server.database import get_news_collection
+from server.forecast import get_price_forecast
+
 
 router = APIRouter()
 

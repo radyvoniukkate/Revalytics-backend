@@ -4,7 +4,7 @@ from passlib.hash import bcrypt
 from pydantic import BaseModel
 from datetime import datetime, timedelta
 import jwt
-from database import db
+from server.database import db
 
 router = APIRouter()
 
