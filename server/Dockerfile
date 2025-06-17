@@ -1,5 +1,5 @@
 # Вибір образу з Python 3.10
-FROM python:3.10-slim
+FROM python:3.10
 
 # Встановлення системних залежностей
 RUN apt-get update && apt-get install -y \
