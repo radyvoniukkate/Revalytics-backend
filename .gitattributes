@@ -1,2 +1,24 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+
+# Virtual env
+.venv/
+venv/
+env/
+
+# dotenv
+.env
+
+# VS Code
+.vscode/
+
+# macOS & system files
+.DS_Store
+
+# Log files
+*.log
