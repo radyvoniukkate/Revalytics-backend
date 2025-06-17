@@ -1,5 +1,5 @@
-# Вибір образу з Python 3.10
-FROM python:3.10
+# Вибір образу з Python 3.10 + Debian Bullseye
+FROM python:3.10-bullseye
 
 # Встановлення системних залежностей
 RUN apt-get update && apt-get install -y \
